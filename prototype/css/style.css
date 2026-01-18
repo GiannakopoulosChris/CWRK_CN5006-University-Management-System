@@ -1,0 +1,210 @@
+/*
+ * Βασικό αρχείο CSS για την εργασία
+ * Περιλαμβάνει γενικά στυλ, στυλ φόρμας, responsive media queries.
+ */
+
+/* --- Γενικά Στυλ --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+img.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+/* --- Header & Footer --- */
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Διάκενο μεταξύ των στοιχείων */
+}
+
+.main-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* --- Κουμπιά (Buttons) --- */
+.btn {
+    display: inline-block;
+    background: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #004494;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* --- Αρχική Σελίδα (Hero & Content) --- */
+.hero {
+    background: #0056b3;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+.content-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Χάρτης (Map) --- */
+#map {
+    height: 400px; /* Ύψος χάρτη */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* --- Φόρμες (Login/Register) --- */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Σωστή διαχείριση padding */
+}
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* --- Μηνύματα (Alerts) --- */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* --- Responsive UI (Media Queries) --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav a, .main-nav span {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
